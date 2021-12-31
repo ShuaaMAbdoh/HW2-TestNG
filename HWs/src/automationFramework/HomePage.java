@@ -17,8 +17,13 @@ WebDriver driver;
 	By Account = By.xpath("/html/body/div[8]/header/div[1]/div[3]/div[4]/div[1]/div[2]/div/a/span");
 	By EmailInput = By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[1]/input");
 	By PasswordInput = By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[2]/input");
+	By TitleSignUp=  By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[2]/div/h2");
+	By CancelButton= By.xpath("/html/body/div[14]/div/button");
 
-
+	public void ClickOnCancel() {
+		driver.findElement(CancelButton).click();
+	}
+	
 	public void VerifyLogo() {
 		driver.findElement(LogoImage).isDisplayed();
 	}
@@ -36,10 +41,14 @@ WebDriver driver;
 	}
 	
 	public void EnterEmail() {
-		driver.findElement(EmailInput).sendKeys("email@example.com");
+		driver.findElement(EmailInput).sendKeys("example@email.com");
 	}
 	
 	public void EnterPassword() {
-		driver.findElement(PasswordInput).sendKeys("password");
+		driver.findElement(PasswordInput).sendKeys("123456Qwe@");
+	}
+	
+	public String GetTitle() {
+		return driver.findElement(TitleSignUp).getText().toString();
 	}
 }
