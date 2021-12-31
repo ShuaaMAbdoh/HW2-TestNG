@@ -45,7 +45,6 @@ public class HW1 {
 	  
 	  String welcomeTitle = driver.findElement(By.xpath("xpath")).getText().toString();
 	  Assert.assertEquals(welcomeTitle, "Welcome, User");
-
   }
   
   @BeforeTest
@@ -55,11 +54,9 @@ public class HW1 {
       driver.get(baseUrl);
   }
   
-
   @AfterTest
   public void afterMethod() {
 	 // driver.close();
   }
-
 }
 
