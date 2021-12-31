@@ -18,6 +18,7 @@ public class HomePage {
 	By PasswordInput = By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[2]/input");
 	By TitleSignUp=  By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[2]/div/h2");
 	By CancelButton= By.xpath("/html/body/div[14]/div/button");
+	By ErrorInvalidEmail= By.xpath("/html/body/div[8]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[1]/div");
 
 	public void ClickOnCancel() {
 		driver.findElement(CancelButton).click();
@@ -49,5 +50,9 @@ public class HomePage {
 	
 	public String GetTitle() {
 		return driver.findElement(TitleSignUp).getText().toString();
+	}
+	
+	public String InvalidEmailMessage() {
+		return driver.findElement(ErrorInvalidEmail).getText().toString();
 	}
 }
