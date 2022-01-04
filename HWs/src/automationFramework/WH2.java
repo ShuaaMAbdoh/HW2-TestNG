@@ -26,7 +26,7 @@ public class WH2 {
   @Test
   public void f() {
 	  ReadFile readObj = new ReadFile();
-	  String filePath = "C:\\Users\\ShuaaAbdoh\\Documents\\HWs-TestNG\\HWs";
+	  String filePath = "C:\\Users\\ShuaaAbdoh\\Documents\\HWs\\HWs";
 		String baseUrl =constant.baseUrlHW2;
 		System.setProperty("webdriver.chrome.driver",constant.webdriver);
 		
